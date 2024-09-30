@@ -6,7 +6,7 @@ Modulo para administrar las preguntas frecuentes
   - Content > FAQ > Manage FAQs 
   - Vendor > Content > Manage FAQs
 - Puedes encontrar extras como
-  - Apartado en store > configuration > Vendor
+  - Apartado en store > configuration > Vendor
   - ACL
   - Algunas rutas API
   - Archivos de idiomas
