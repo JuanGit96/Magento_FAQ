@@ -1,0 +1,23 @@
+<?php
+/**
+ * @var $block Vendor\FAQ\Block\Index\Index
+ */
+?>
+
+<div class="acordeon-cuerpo">
+    <div class="acordeon">
+        <h1><?= __('FAQ') ?></h1>
+        <hr>
+        <?php foreach ($block->getFAQ() as $item) : ?>
+        <div class="contenedor">
+            <div class="etiqueta">
+                <?= $item->getQuestion(); ?>
+            </div>
+            <div class="contenido">
+                <?= $item->getAnswer(); ?>
+            </div>
+        </div>
+        <hr>
+        <?php endforeach; ?>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{
+    "name": "vendor/module-faq",
+    "description": "Modulo para gestionar preguntas frecuentes",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Juan Daniel Cardenas Davila",
+            "email": "jdcardenasd10@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Vendor\\FAQ\\": ""
+        }
+    }
+}
