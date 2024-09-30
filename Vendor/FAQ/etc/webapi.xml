@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/vendor-faq/faq" method="POST">
+		<service class="Vendor\FAQ\Api\FAQRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Vendor_FAQ::FAQ_save"/>
+		</resources>
+	</route>
+	<route url="/V1/vendor-faq/faq/search" method="GET">
+		<service class="Vendor\FAQ\Api\FAQRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Vendor_FAQ::FAQ_view"/>
+		</resources>
+	</route>
+	<route url="/V1/vendor-faq/faq/:faqId" method="GET">
+		<service class="Vendor\FAQ\Api\FAQRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Vendor_FAQ::FAQ_view"/>
+		</resources>
+	</route>
+	<route url="/V1/vendor-faq/faq/:faqId" method="PUT">
+		<service class="Vendor\FAQ\Api\FAQRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Vendor_FAQ::FAQ_update"/>
+		</resources>
+	</route>
+	<route url="/V1/vendor-faq/faq/:faqId" method="DELETE">
+		<service class="Vendor\FAQ\Api\FAQRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Vendor_FAQ::FAQ_delete"/>
+		</resources>
+	</route>
+</routes>

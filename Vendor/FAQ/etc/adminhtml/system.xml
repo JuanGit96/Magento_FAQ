@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vendor" translate="label" sortOrder="100">
+            <label>Vendor</label>
+        </tab>
+        <section id="vendor_faq" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <tab>vendor</tab>
+            <label>FAQ</label>
+            <resource>Vendor_FAQ::faq</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>FAQ Settings</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>vendor_faq/general/enable</config_path>
+                </field>
+                <field id="faq_table" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>FAQ Records</label>
+                    <frontend_model>Vendor\FAQ\Block\Adminhtml\System\Config\FAQTable</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
